@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/beetrio/beetrio_view_tool
+  revision: aa06a73bd9611c486eac9f7312b80cb3f4ed5efa
+  specs:
+    beetrio_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,6 +195,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  beetrio_view_tool!
   bootstrap (~> 4.0.0.beta)
   byebug
   coffee-rails (~> 4.2)
