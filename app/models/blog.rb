@@ -5,11 +5,11 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
 
-  belongs_to :topic
+  belongs_to :topic, optional: true
 
   has_many :comments, dependent: :destroy
 
   def self.recent
-    order("creeated_at DESC")
+    order("created_at DESC")
   end
 end
