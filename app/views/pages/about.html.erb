@@ -3,10 +3,28 @@
     <h1>About Me</h1>
       <hr>
       <div class="row">
-          <div class="col-md-4">
+        <div class="col-md-4">
 
-            <%= image_tag "my_profile_pic.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+          <%= image_tag "my_profile_pic.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+
+          <div class="skills">
+            <% @skills.each do |skill| %>
+            <div class="skill">
+                <h4><%= skill.title %></h4>
+                <div class="progress">
+                  <div
+                    class="progress-bar progress-bar-striped bg-warning"
+                    role="progressbar"
+                    aria-valuenow="<%= skill.percent_utilized %>"
+                    aria-valuemax="100"
+                    style="width: <%= skill.percent_utilized %>%;"
+                  >
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </div>
+        </div>
 
           <div class="col-md-8">
             <p>With over 15 years of IT experience...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit adipisci quasi a voluptatibus consequuntur voluptas sint nisi debitis est libero tempore animi laborum laboriosam exercitationem accusantium omnis, at facere! Deleniti.</p>
